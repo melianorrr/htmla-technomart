@@ -1,6 +1,6 @@
 # Личный проект «Техномарт»
 
-* Студент: [melianorrr](melianorrr).
+* Студент: [Milada Gudkova](https://up.htmlacademy.ru/htmlcss/35/user/2144201).
 * Наставник: `Неизвестно`.
 
 ---
