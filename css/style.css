@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+} 
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/cuprum.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/cuprumbold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Cuprum";
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/cuprumbolditalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Cuprum";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/cuprumitalic.woff2") format("woff2");
+}
+
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    min-height: 100%;
+    font-family: "Cuprum", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    background-color: #F2F2F2;
+    word-wrap: break-word;
+    margin: 0;
+}
+.page-header {
+    width: 100%;
+    background-color: #293449;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+.main-index {
+
+}
+.page-footer {
+    width: 100%;
+    background-color: #293449;
+    padding-left: 130px;
+    padding-right: 130px;
+}
