@@ -1,6 +1,6 @@
-# Личный проект «{{projectTitle}}»
+# Личный проект «Техномарт»
 
-* Студент: [{{userName}}]({{userProfile}}).
+* Студент: [Milada Gudkova](https://up.htmlacademy.ru/htmlcss/35/user/2144201).
 * Наставник: `Неизвестно`.
 
 ---
