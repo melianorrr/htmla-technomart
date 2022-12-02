@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <title>HTML Academy: Technomart</title>
   </head>
 
@@ -10,16 +10,18 @@
     <header class="page-header">
       <nav class="navigation">
         <section class="navigation-user">
-          <a class="navigation-logo" href="index.html">Техномарт</a>
-          <ul class="user-list">
-            <li class="user-item">Поиск:</li>
-            <li class="user-item">Закладки: <span>0</span></li>
-            <li class="user-item">Корзина: <span>0</span></li>
-          </ul>
-          <button type="button">Оформить заказ</button>
+          <div class="navigation-user-wrapper">
+            <a class="navigation-logo" href="index.html">Техномарт</a>
+            <ul class="user-list">
+              <li class="user-item">Поиск:</li>
+              <li class="user-item">Закладки: <span>0</span></li>
+              <li class="user-item">Корзина: <span>0</span></li>
+            </ul>
+            <button type="button">Оформить заказ</button>
+          </div>
         </section>
         <section class="navigation-main">
-          <h1>Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h1>
+          <h2>Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h2>
           <div class="navigation-contacts">
             <a class="navigation-phone" href="tel:+78005558628">+7 800 555-86-28</a>
             <p class="navigation-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
@@ -56,6 +58,7 @@
     </header>
 
     <main class="main-index">
+      <h1 class="visually-hidden">Добро пожаловать в интернет-магазин инструментов и стройматериалов "Техномарт".</h1>
       <section class="hero">
         <h2 class="visually-hidden">Преимущества.</h2>
         <ul class="advantages-list">

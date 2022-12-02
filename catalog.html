@@ -2,12 +2,84 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <title>HTML Academy: Technomart</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <header class="page-header">
+      <nav class="navigation">
+        <section class="navigation-user">
+          <div class="navigation-user-wrapper">
+            <a class="navigation-logo" href="index.html">Техномарт</a>
+            <ul class="user-list">
+              <li class="user-item">Поиск:</li>
+              <li class="user-item">Закладки: <span>0</span></li>
+              <li class="user-item">Корзина: <span>0</span></li>
+            </ul>
+            <button type="button">Оформить заказ</button>
+          </div>
+        </section>
+        <section class="navigation-main">
+          <h1>Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h1>
+          <div class="navigation-contacts">
+            <a class="navigation-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+            <p class="navigation-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+          </div>
+          <div class="personal-wrapper">
+            <input class="personal" type="text" placeholder="Равшан Джамшутович">
+            <div class="personal-link-wrapper">
+              <a href="#" class="personal-link">Мои заказы</a>
+              <a href="#" class="personal-link">Личный кабинет</a>
+            </div>
+          </div>
+        </section>
+        <section class="navigation-menu">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Компания</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Каталог</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Новости</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Спецпредложения</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </header>
+    <main>
+      <header class="catalog-main-header">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-index">
+            <a class="breadcrumbs-link" href="#">
+              <span class="visually-hidden">Главная.</span>
+            </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a href="#" class="breadcrumbs-link">Каталог</a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a href="#" class="breadcrumbs-link">Инструмент</a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a href="#" class="breadcrumbs-link">Перфораторы</a>
+          </li>
+        </ul>
+        <h1>Перфораторы</h1>
+      </header>
+    </main>
   </body>
 </html>
