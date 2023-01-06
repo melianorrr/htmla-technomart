@@ -631,7 +631,7 @@ body {
     width: 940px;
     margin: auto;
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 220px 700px;
     gap: 20px;
     align-content: start;
 }
@@ -714,7 +714,12 @@ body {
     text-transform: uppercase;
 }
 
-
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    column-gap: 20px;
+    row-gap: 18px;
+}
 
 .catalog-about {
     background-color: var(--blue-pale);    
