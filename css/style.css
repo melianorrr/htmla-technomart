@@ -62,6 +62,8 @@
     --yellow-light: #FFD180;
     --violet-neutral: #DC91D8;
     --beige-pale: #F9F5F0;
+
+    --ptsans: "PT Sans", sans-serif;
 }
 
 html {
@@ -540,7 +542,7 @@ body {
     margin-bottom: 30px;
 }
 .services-article > p {
-    font-family: "PT Sans";
+    font-family: var(--ptsans);
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -574,7 +576,7 @@ body {
 .about-contacts > p {
     margin: 0;
     margin-bottom: 32px;
-    font-family: 'PT Sans';
+    font-family: var(--ptsans);
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
@@ -654,7 +656,40 @@ body {
 .catalog-filter h3 {
     padding: 10px 18px;
     background-color: var(--pink-pale);
+    margin: 0;
     margin-bottom: 14px;
+    font-family: var(--ptsans);
+    font-weight: 400;
+}
+.search-header {
+    display: flex;
+    background-color: var(--pink-pale);
+    padding: 10px 20px;
+    align-items: center;
+    font-family: var(--ptsans);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
+.search-header h3 {
+    font-weight: 400;
+}
+.search-control-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 46px;
+    gap: 65px;
+}
+.search-control-buttons {
+    display: flex;
+    gap: 21px;
+}
+.search-control-list > .current {
+    color: var(--red);
 }
 /* Breadcrumbs */
 .breadcrumbs {
@@ -707,7 +742,7 @@ body {
     margin: 0;
 }
 .filter-title {
-    font-family: 'PT Sans';
+    font-family: var(--ptsans);
     font-weight: 700;
     font-size: 17px;
     line-height: 30px;
@@ -716,9 +751,13 @@ body {
 
 .products-list {
     display: grid;
+}
+.products-list-catalog {
+    display: grid;
     grid-template-columns: repeat(3, 220px);
     column-gap: 20px;
     row-gap: 18px;
+    list-style: none;
 }
 
 .catalog-about {
@@ -738,7 +777,7 @@ body {
     margin-bottom: 25px;
 }
 .catalog-about p {
-    font-family: 'PT Sans';
+    font-family: var(--ptsans);
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
