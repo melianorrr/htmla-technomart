@@ -59,6 +59,7 @@
     --blue-gray-dark: #293449;
     --blue-gray-neutral: #32425C;
     --blue-gray-light: #405069;
+    --blue-gray-extralight: #969cac;
     --blue-pale: #F1F5F7;
     --sky-blue-neutral: #3BBCE3;
     --sky-blue-pale: #F3F7F9;
@@ -228,7 +229,7 @@ body {
     color: var(--red);
     padding: 8px 50px 8px 74px;
     text-decoration: none;
-    border: 3px solid var(--white);
+    outline: 3px solid var(--white);
     margin-bottom: 3px;
 }
 .navigation-address {
@@ -452,7 +453,7 @@ body {
 }
 .products-item {
     box-sizing: border-box;
-    border: solid 1px var(--red-pale);
+    outline: solid 1px var(--red-pale);
     list-style: none;
 }
 .products-card,
@@ -463,9 +464,12 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    min-height: 318px;
-    border: 1px solid var(--red-pale);
+    outline: 1px solid var(--red-pale);
 }
+.products-card {
+    min-height: 318px;
+}
+
 .products-item:nth-child(2),
 .products-item:nth-child(4),
 .products-item-catalog:nth-child(3),
@@ -521,26 +525,38 @@ body {
     box-shadow: inset 0px -3px 0px var(--green-dark);
     border-radius: 2px;
     text-transform: uppercase;
-    min-width: 135px;
+    width: 135px;
     padding: 10px 40px 10px 53px;
-    position: relative;
-    background-image: url("../img/icons/cart.svg");
+    background-image: url("../img/icons/cart-green.svg");
     background-repeat: no-repeat;
     background-position: center left 30px;
     margin-bottom: 10px;
 }
+.products-purchase:hover {
+    background-color: var(--green-light);
+}
+.products-purchase:active {
+    background-color: var(--green-gray);
+}
 .products-save {
-    box-sizing: border-box;
     color: var(--blue-gray-neutral);
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
     background-color: var(--white);
-    border: 3px solid var(--green);
+    border: none;
+    outline: 3px solid var(--green);
     border-radius: 2px;
-    min-width: 135px;
-    padding: 8px;
+    width: 131px;
+    padding: 7px;
+}
+.products-save:hover {
+    outline: 3px solid var(--blue-gray-neutral);
+}
+.products-save:active {
+    outline: 3px solid var(--blue-gray-extralight);
+    color: var(--blue-gray-extralight);
 }
 .new {
     position: absolute;
