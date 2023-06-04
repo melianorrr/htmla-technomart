@@ -55,7 +55,10 @@
     --green: #63A63E;
     --green-light: #5FBB2D;
     --green-pale: #8ED78F;
+    --gray-dark: #ABABAB;
     --gray: #A9A9A9;
+    --gray-light: #C5C5C5;
+    --gray-dark-transparent: #ABABAB4D;
     --blue-gray-extradark: #212A3A;
     --blue-gray-dark: #293449;
     --blue-gray-neutral: #32425C;
@@ -868,6 +871,7 @@ body {
     margin-bottom: 14px;
     font-family: var(--ptsans);
     font-weight: 400;
+    border-radius: 2px;
 }
 
 /* Control */
@@ -883,14 +887,6 @@ body {
 }
 .catalog-filter-item {
     margin-bottom: 20px;
-}
-.filter-title {
-    margin-bottom: 17px;
-    font-family: var(--ptsans);
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 30px;
-    text-transform: uppercase;
 }
 fieldset:first-of-type legend {
     margin-bottom: 10px;
@@ -910,8 +906,7 @@ fieldset:not(:last-of-type) ul::after {
     bottom: -27px;
     left: 0;
 }
-
-.catalog-filter button {
+.filter-button {
     font-family: var(--ptsans);
     font-size: 13px;
     line-height: 18px;
@@ -920,6 +915,60 @@ fieldset:not(:last-of-type) ul::after {
     background-color: var(--white);
     border: 1px solid var(--pink-pale);
     cursor: pointer; 
+}
+/* Filter */
+.catalog-filter legend {
+    margin-bottom: 17px;
+    font-family: var(--ptsans);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.range {
+    height: 80px;
+    background-color: var(--yellow-pale);
+    border-radius: 2px;
+    margin-bottom: 9px;
+    position: relative;
+    width: 220px;
+}
+.range-bar {
+    position: relative;
+    top: 39px;
+    left: 20px;
+    width: 180px;
+    height: 2px;
+    background-color: var(--gray-light);
+}
+.range-scale {
+    height: 2px;
+    width: 85%;
+    background-color: var(--green);
+}
+.range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 0 var(--gray-dark-transparent);
+}
+.toggle-min {
+    top: -8px;
+}
+.toggle-max {
+    top: -8px;
+    right: 15%;
+}
+.point {
+    width: 4px;
+    height: 4px;
+    margin: auto;
+    background-color: var(--gray-dark);
+    border-radius: 50%;
 }
 /* Mark */
 .control-mark {
@@ -969,6 +1018,7 @@ fieldset:not(:last-of-type) ul::after {
     font-size: 13px;
     line-height: 18px;
     margin-bottom: 28px;
+    border-radius: 2px;
 }
 .search-header h3 {
     font-weight: 400;

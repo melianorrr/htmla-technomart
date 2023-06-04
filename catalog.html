@@ -95,15 +95,18 @@
 
         <form class="catalog-filter" method="get" action="https://echo.htmlacademy.ru">
           <h3>Фильтр</h3>
-          <fieldset>
-            <legend class="filter-title">Цена:</legend>
+          <fieldset class="filter-item">
+            <legend>Цена:</legend>
             <div class="filter-price">
-              <div class="range-scale">
-                <div class="range-bar" style="width: 180px; height: 2px;">
+              <div class="range">
+                <div class="range-bar">
+                  <div class="range-scale"></div>
                   <button class="range-toggle toggle-min">
+                    <div class="point"></div>
                     <span class="visually-hidden">Изменить минимальную цену.</span>
                   </button>
                   <button class="range-toggle toggle-max">
+                    <div class="point"></div>
                     <span class="visually-hidden">Изменить максимальную цену.</span>
                   </button>
                 </div>
@@ -172,7 +175,7 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="filter-button" type="submit">Показать</button>
         </form>
 
         <section class="search-results">
