@@ -100,20 +100,22 @@
             <div class="filter-price">
               <div class="range">
                 <div class="range-bar">
-                  <div class="range-scale"></div>
-                  <button class="range-toggle toggle-min">
+                  <div class="range-scale" style="width: 85%; left: 0;"></div>
+                  <button class="range-toggle toggle-min" tabindex="0" style="left: 0;">
                     <div class="point"></div>
                     <span class="visually-hidden">Изменить минимальную цену.</span>
                   </button>
-                  <button class="range-toggle toggle-max">
+                  <button class="range-toggle toggle-max" tabindex="0" style="left: 80%;">
                     <div class="point"></div>
                     <span class="visually-hidden">Изменить максимальную цену.</span>
                   </button>
                 </div>
               </div>
-              <input class="price-range min" type="number" value="0">
-              <span>-</span>
-              <input class="price-range max" type="text" value="30000">
+              <div class="price-controls">
+                <input class="price-range min" type="number" value="0" name="min-price">
+                <span>-</span>
+                <input class="price-range max" type="text" value="30000" name="max-price">
+              </div>  
             </div>
           </fieldset>
           <fieldset>

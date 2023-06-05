@@ -55,6 +55,7 @@
     --green: #63A63E;
     --green-light: #5FBB2D;
     --green-pale: #8ED78F;
+    --gray-extradark: #444444;
     --gray-dark: #ABABAB;
     --gray: #A9A9A9;
     --gray-light: #C5C5C5;
@@ -943,7 +944,6 @@ fieldset:not(:last-of-type) ul::after {
 }
 .range-scale {
     height: 2px;
-    width: 85%;
     background-color: var(--green);
 }
 .range-toggle {
@@ -961,7 +961,6 @@ fieldset:not(:last-of-type) ul::after {
 }
 .toggle-max {
     top: -8px;
-    right: 15%;
 }
 .point {
     width: 4px;
@@ -969,6 +968,34 @@ fieldset:not(:last-of-type) ul::after {
     margin: auto;
     background-color: var(--gray-dark);
     border-radius: 50%;
+}
+.price-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-controls span {
+    font-family: var(--ptsans);
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--gray-extradark);
+}
+.price-controls input {
+    font-family: var(--ptsans);
+    font-size: 17px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--black);
+    background-color: var(--yellow-pale);
+    border: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    max-width: 95px;
+    text-align: center;
 }
 /* Mark */
 .control-mark {
@@ -1303,6 +1330,18 @@ fieldset:not(:last-of-type) ul::after {
     text-decoration: none;
     color: var(--yellow-light);
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ 
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
