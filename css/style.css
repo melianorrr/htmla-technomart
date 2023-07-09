@@ -45,6 +45,7 @@
     --black: #000000;
     --black-transparent: #0000003d;
     --black-transparent-2: #00000026;
+    --black-transparent-3: #0000004D;
     --black-supertransparent: #00000003;
     --white: #FFFFFF;
     --white-transparent: #FFFFFF4D;
@@ -72,6 +73,7 @@
     --blue-gray-neutral: #32425C;
     --blue-gray-light: #405069;
     --blue-gray-extralight: #969cac;
+    --blue-gray-hover: #3D546F;
     --blue-gray-active: #161D29;
     --blue-pale: #F1F5F7;
     --sky-blue-neutral: #3BBCE3;
@@ -207,27 +209,27 @@ body {
     cursor: pointer;
     padding: 9px 24px 9px 43px;
 }
-.user-item:first-of-type::before {
-    content: "";
+.flag {
     position: absolute;
     width: 14px;
     height: 16px;
-    background-image: url("../img/icons/flag.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     top: 13px;
     left: 20px;
 }
-.user-item:last-of-type::before {
-    content: "";
+.cart {
     position: absolute;
     width: 15px;
     height: 15px;
-    background-image: url("../img/icons/cart.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     top: 13px;
     left: 20px;
+}
+.search {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 13px;
+    left: 237px;
+    cursor: pointer;
 }
 .user-item:hover,
 .navigation-search:hover {
@@ -239,6 +241,10 @@ body {
 .user-item:active {
     background-color: var(--blue-gray-active);
     color: var(--white-active);
+}
+.user-item:hover > svg,
+.search:hover {
+    fill: var(--white);
 }
 
 .navigation-logo {
@@ -259,23 +265,25 @@ body {
     padding: 12px 56px;
 }
 .navigation-search {
-    position: relative;
+    flex-grow: 2;
+    background-color: inherit;
+    border: none;
     text-decoration: none;
-    color: inherit;
+    color: var(--white);
     margin: 0;
-    margin-left: 262px;
-    margin-right: auto;
+    margin-left: 2px;
+    padding: 9px;
+    padding-left: 262px;
+    padding-right: auto;
+    cursor: pointer;
 }
-.navigation-search::before {
-    content: "";
-    position: absolute;
-    width: 17px;
-    height: 17px;
-    background-image: url("../img/icons/search.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 3px;
-    left: -25px;
+.navigation-search:focus {
+    outline: 2px solid var(--white);
+    color: var(--black);
+    background-color: var(--white);
+}
+.navigation-search:focus + svg {
+    fill: var(--red);
 }
 .navigation-main > h2 {
     font-weight: 400;
@@ -290,22 +298,34 @@ body {
     padding-bottom: 45px;
     margin-right: 93px;
 }
-.navigation-main > button:first-of-type {
+.signin {
+    box-sizing: border-box;
+    position: relative;
     min-width: 121px;
     padding-right: 27px;
     padding-left: 45px;
     margin-right: 10px;
+    margin-bottom: 35px;
 }
-.navigation-main > button:last-of-type {
+.login {
+    position: absolute;
+    top: 13px;
+    left: 19px;
+}
+.signup {
+    box-sizing: border-box;
+    padding: 12px 24px;
     min-width: 150px;
-    margin: 0;
+    margin-bottom: 35px;
 }
+
 .navigation-contacts {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: auto;
 }
+
 .navigation-phone {
     width: 146px;
     display: flex;
@@ -357,20 +377,56 @@ body {
     color: var(--white-active);
 }
 
+.personal-wrapper {
+    position: relative;
+}
 .personal {
     box-sizing: border-box;
     width: 299px;
     padding: 12px;
     text-align: center;
     border: none;
-    background-image: url("/img/icons/user.svg"), url("/img/icons/logout.svg");
     background-color: var(--white);
-    background-repeat: no-repeat;
-    background-position: center left 15px, center right 15px;
     font-size: 21px;
     line-height: 21px;
     margin-bottom: 7px;
+    margin-left: auto;
+    cursor: pointer;
 }
+.personal:hover,
+.personal-link:hover,
+.signin:hover,
+.signup:hover {
+    color: var(--red);
+}
+.personal-link:active,
+.personal-wrapper:active,
+.signin:active,
+.signup:active {
+    color: var(--gray-light);
+}
+.personal:focus {
+    outline: none;
+}
+.user {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+}
+.logout {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.personal-wrapper:hover > svg,
+.signin:hover > svg {
+    fill: var(--blue-gray-hover);
+}
+.personal-wrapper:active > svg,
+.signin:active > svg {
+    fill: var(--gray-light);
+}
+
 .personal-link-wrapper {
     text-align: center;
 }
@@ -395,12 +451,6 @@ body {
 }
 .personal-link:last-of-type {
     margin: 0;
-}
-.login {
-    background-image: url("/img/icons/login.svg");
-    background-color: var(--white);
-    background-repeat: no-repeat;
-    background-position: center left 19px;
 }
 
 /* Main */
@@ -1115,21 +1165,25 @@ fieldset:not(:last-of-type) ul::after {
 }
 .search-control-buttons {
     display: flex;
-    gap: 21px;
+    gap: 9px;
 }
-.up {
-    background-image: url("../img/icons/arrow-up.svg");
-    width: 11px;
-    height: 11px;
-    background-repeat: no-repeat;
-    border: none;
+.search-control-item {
+    cursor: pointer;
+    color: var(--black-transparent-3);
 }
+.search-control-item:hover {
+    color: var(--black);
+}
+.up, 
 .down {
-    background-image: url("../img/icons/arrow-down.svg");
-    width: 11px;
-    height: 11px;
-    background-repeat: no-repeat;
     border: none;
+    cursor: pointer;
+    padding: none;
+    background-color: inherit;
+}
+.up:hover > svg,
+.down:hover > svg {
+    fill: var(--black);
 }
 .search-control-list > .current {
     color: var(--red);
