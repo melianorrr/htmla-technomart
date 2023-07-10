@@ -627,9 +627,19 @@ body {
     align-items: center;
     position: relative;
     outline: 1px solid var(--red-pale);
+    cursor: pointer;
 }
 .products-card {
     min-height: 318px;
+}
+.products-card:hover,
+.clients-item:hover {
+    box-shadow: 0px 4px 20px 0px var(--black-transparent-2);
+}
+.products-card:active,
+.clients-item:active {
+    box-shadow: 0px 4px 20px 0px var(--black-transparent-2);
+    opacity: 50%;
 }
 
 .products-item:nth-child(2),
@@ -810,6 +820,17 @@ body {
     color: var(--white);
     text-align: left;
     padding: 14px 22px 17px;
+    cursor: pointer;
+}
+.services-button:hover {
+    color: var(--white);
+    background: var(--blue-gray-neutral);
+    box-shadow: 0px 1px 0px 0px var(--blue-gray-dark), 0px 1px 0px 0px var(--blue-gray-light) inset;
+}
+.services-button:active {
+    color: var(--white);
+    background: var(--blue-gray-dark);
+    box-shadow: 0px 1px 0px 0px #var(--blue-gray-dark), 0px 1px 0px 0px var(--blue-gray-light) inset;
 }
 .services-button-current {
     background-color: var(--white);
@@ -983,6 +1004,7 @@ body {
 .control {
     position: relative;
     display: block;
+    cursor: pointer;
 }
 .control-label {
     font-family: var(--ptsans);
@@ -993,16 +1015,22 @@ body {
 .catalog-filter-item {
     margin-bottom: 20px;
 }
-fieldset:first-of-type legend {
+.filter-item {
+    position: relative;
+}
+.filter-item:first-of-type legend {
     margin-bottom: 10px;
 }
-fieldset:last-of-type legend {
+.filter-item:last-of-type legend {
     margin-bottom: 24px;
 }
-fieldset:last-of-type ul {
+.catalog-filter > fieldset:first-of-type {
+    margin-bottom: 42px;
+}
+.filter-item:last-of-type ul {
     margin-bottom: 37px;
 }
-fieldset:not(:last-of-type) ul::after {
+.underlined::after {
     content: "";
     position: absolute;
     background-color: var(--pink-pale);
@@ -1021,6 +1049,7 @@ fieldset:not(:last-of-type) ul::after {
     border: 1px solid var(--pink-pale);
     cursor: pointer; 
 }
+
 /* Filter */
 .catalog-filter legend {
     margin-bottom: 17px;
@@ -1170,10 +1199,15 @@ fieldset:not(:last-of-type) ul::after {
 .search-control-item {
     cursor: pointer;
     color: var(--black-transparent-3);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--red);
 }
 .search-control-item:hover {
     color: var(--black);
-}
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: var(--red);}
 .up, 
 .down {
     border: none;
@@ -1187,6 +1221,7 @@ fieldset:not(:last-of-type) ul::after {
 }
 .search-control-list > .current {
     color: var(--red);
+    text-decoration: none;
 }
 
 /* Breadcrumbs */
@@ -1210,6 +1245,12 @@ fieldset:not(:last-of-type) ul::after {
 .breadcrumbs-item {
     padding: 20px 0;
     position: relative;
+}
+.breadcrumbs-item:hover > a {
+    color: var(--red);
+}
+.breadcrumbs-item:active > a {
+    color: var(--black-transparent-3);
 }
 .breadcrumbs-item::before {
     position: absolute;
@@ -1306,11 +1347,13 @@ fieldset:not(:last-of-type) ul::after {
     cursor: pointer;
 }
 .pagination-item:hover,
-.pagination-next:hover {
+.pagination-next:hover,
+.filter-button:hover {
     outline: 1px solid var(--gray-light);    
 }
 .pagination-item:active,
-.pagination-next:active {
+.pagination-next:active,
+.filter-button:active {
     outline: 1px solid var(--red);    
 }
 .pagination-link {
@@ -1397,6 +1440,22 @@ fieldset:not(:last-of-type) ul::after {
     text-decoration: none;
     color: var(--yellow-light);
 }
+.footer-navigation-item:hover,
+.footer-phone:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--white);
+}
+.footer-sections-item:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--yellow-light);
+}
+.footer-navigation-item:active,
+.footer-sections-item:active,
+.footer-phone:active {
+    opacity: 50%;
+    text-decoration: none;
+}
+
 .footer-contacts {
     background-color: var(--blue-gray-dark);
     color: var(--white);
@@ -1423,6 +1482,13 @@ fieldset:not(:last-of-type) ul::after {
     justify-content: center;
     align-items: center;
 }
+.social-wrapper:hover {
+    background-color: var(--red);
+}
+.social-wrapper:active {
+    background-color: var(--red);
+}
+
 .footer-phone {
     text-decoration: none;
     color: var(--sky-blue-pale);
@@ -1445,6 +1511,14 @@ fieldset:not(:last-of-type) ul::after {
 .text-beige {
     text-decoration: none;
     color: var(--yellow-light);
+}
+.text-beige:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--yellow-light);
+}
+.text-beige:active {
+    text-decoration: none;
+    color: var(--red);
 }
 
 /* Modal form */
