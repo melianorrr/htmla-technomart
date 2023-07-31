@@ -67,6 +67,7 @@
     --gray-light-hover: #C5C5C580;
     --gray-light-active: #A9A9A980;
     --gray-pale: #F4F4F4;
+    --gray-modal: #f1f1f1;
     --gray-dark-transparent: #ABABAB4D;
     --blue-gray-extradark: #212A3A;
     --blue-gray-dark: #293449;
@@ -1099,10 +1100,13 @@ body {
 .toggle-max {
     top: -8px;
 }
-.point {
+.range-toggle::before {
+    position: absolute;
+    content: "";
     width: 4px;
     height: 4px;
-    margin: auto;
+    top: 8px;
+    left: 8px;
     background-color: var(--gray-dark);
     border-radius: 50%;
 }
@@ -1335,6 +1339,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    flex-wrap: wrap;
 }
 .pagination-item {
     display: flex;
@@ -1542,17 +1547,12 @@ body {
     background-color: var(--white);
     box-shadow: 0 20px 40px var(--black-transparent-2);
     min-width: 620px;
-    min-height: 430px;
-    padding: 46px 80px;
     box-sizing: border-box;
 }
-.map {
-    display: block;
-    padding: 0;
-}
-.map iframe {
-    border: none;
-}
+.contact-form {
+    min-height: 430px;
+    padding: 46px 80px;
+} 
 .modal::after {
     content: "";
     position: absolute;
@@ -1641,6 +1641,58 @@ body {
     padding: 10px 199px;
 }
 
+/* Popup map */
+.map {
+    display: block;
+    padding: 0;
+    min-height: 430px;
+}
+.map iframe {
+    border: none;
+}
+
+/* Popup cart */
+.cart {
+    min-height: 282px;
+}
+.added {
+    position: relative;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    padding: 73px 99px 67px;
+    margin: 0;
+    text-align: center;
+}
+.added::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/icons/check-green.svg);
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 66px;
+    top: 55px;
+    left: 81px;
+}
+.cart-buttons {
+    background-color: var(--gray-modal);
+    display: flex;
+    justify-content: space-between;
+    padding: 37px 112px;
+}
+.cart-buttons .red {
+    padding: 10px 46px;
+}
+.cart-buttons .white {
+    padding: 10px 32px;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+.cart-buttons .white:hover {
+    color: var(--red);
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -1666,6 +1718,6 @@ input[type=number] {
 
 /* Чтобы отобразить модальное окно, закомментируйте код: */
 
-.modal-container-close {
+/* .modal-container-close {
     display: none;
-  }
+  } */
