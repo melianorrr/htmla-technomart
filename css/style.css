@@ -1668,6 +1668,7 @@ body {
     content: "";
     position: absolute;
     background-image: url(../img/icons/check-green.svg);
+    background-color: var(--green);
     background-repeat: no-repeat;
     width: 66px;
     height: 66px;
@@ -1718,6 +1719,6 @@ input[type=number] {
 
 /* Чтобы отобразить модальное окно, закомментируйте код: */
 
-/* .modal-container-close {
+.modal-container-close {
     display: none;
-  } */
+  }
